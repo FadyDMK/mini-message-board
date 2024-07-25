@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Message Board</title>
+    <link rel="stylesheet" href="./stylesheet/styles.css" />
+  </head>
+  <body>
+    <h3 class="header">MessageBoard</h3>
+    <form method="POST" action="/new" class="form">
+      <input type="text" name="user" placeholder="Username" required />
+      <textarea name="text" placeholder="Your Message" rows="3" required ></textarea>
+      <div class="btns">
+        <button type="submit" class="btnSend">Send</button>
+        <button onclick="location.href='/'" class="btnCancel">Cancel</button>
+      </div>
+    </form>
+  </body>
+</html>

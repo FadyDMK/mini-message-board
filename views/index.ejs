@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Message Board</title>
+    <link rel="stylesheet" href="./stylesheet/styles.css" />
+  </head>
+  <body>
+    <h3 class="header">MessageBoard</h3>
+    <ul>
+      <div class="container">
+        <% messages.forEach(function(message){ %>
+        <li class="message">
+          <strong class="user"><%= message.user %>:</strong>
+          <div class="text"><%= message.text %></div>
+          <div class="date"><%=message.added %></div>
+          <button onclick="location.href='/message/<%= message.id %>'" class="btndtl">
+            Details
+          </button>
+        </li>
+        <% }); %>
+      </div>
+    </ul>
+    <button onclick="location.href='/new'" class="newbtn">New message</button>
+  </body>
+</html>
