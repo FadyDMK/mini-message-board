@@ -1,6 +1,14 @@
 <html>
-    <h3>Message From <%= message.user  %></h3>
-    <div><%= message.text %></div>
-    <div><%= message.added %></div>
-    <button onclick="location.href='/'">Back</button>
+  <head>
+    <title>Message Board</title>
+    <link rel="stylesheet" href="./stylesheet/styles.css" />
+  </head>
+  <body>
+    <div class="message showcase">
+      <h3>Message From <%= message.user %></h3>
+      <div><%= message.text %></div>
+      <div><%= message.added %></div>
+      <button onclick="location.href='/'">Back</button>
+    </div>
+  </body>
 </html>
