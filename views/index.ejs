@@ -7,9 +7,9 @@
     <h3 class="header">MessageBoard</h3>
     <ul>
       <div class="container">
-        <% messages.forEach(function(message){ %>
+        <% messages.map((message) => { %>
         <li class="message">
-          <strong class="user"><%= message.user %>:</strong>
+          <strong class="user"><%= message.username %>:</strong>
           <div class="text"><%= message.text %></div>
           <div class="date"><%=message.added %></div>
           <button onclick="location.href='/message/<%= message.id %>'" class="btndtl">
