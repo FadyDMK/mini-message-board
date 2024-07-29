@@ -14,7 +14,8 @@ INSERT INTO messages (text, username) VALUES ('Hi there!', 'Amando');
 async function main() {
     console.log("seeding...");
     const client = new Client({
-      connectionString: `postgresql://${process.env.ROLE}:${process.env.ROLE_PWD}@localhost:${process.env.DB_PORT}/message_db`,
+                        
+      connectionString: `postgresql://${process.env.ROLE}:${process.env.ROLE_PWD}@${process.env.HOST}/${process.env.DB_NAME}?ssl=true`,
     });
     await client.connect();
     await client.query(SQL);
